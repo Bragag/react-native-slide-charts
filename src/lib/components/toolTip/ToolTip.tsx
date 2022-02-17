@@ -227,6 +227,7 @@ class ToolTip extends Component<ToolTipComponentProps, State> {
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
+    marginTop: 20
   },
   square: {
     position: 'absolute',
