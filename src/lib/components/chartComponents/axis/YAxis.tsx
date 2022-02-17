@@ -155,7 +155,7 @@ class YAxis extends Component<YAxisComponentProps> {
               'middle',
             key: `${i}-text`,
             labelStyle: axisMarkerStyle,
-            label:yRange[0]  + (i * tickInterval) > 9 ? parseInt(yRange[0]  + (i * tickInterval)) : parseFloat(yRange[0]  + (i * tickInterval)).toPrecision(3) 
+            label:yRange[0]  + (i * tickInterval) > 9 ? parseInt(yRange[0]  + (i * tickInterval)) :  parseFloat(yRange[0]  + (i * tickInterval)).toPrecision(3).toString().replace('.', ',')) 
           }))
         }
       }
