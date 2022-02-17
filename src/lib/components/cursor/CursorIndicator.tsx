@@ -41,7 +41,6 @@ class CursorIndicator extends Component<CursorIndicatorProps> {
 const styles = StyleSheet.create({
   cursor: {
     position: 'absolute',
-    borderWidth: 6,
     ...Platform.select({
       ios: {
         shadowColor: 'black',
