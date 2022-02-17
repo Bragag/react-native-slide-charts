@@ -40,7 +40,8 @@ class YAxis extends Component<YAxisComponentProps> {
     label,
     textAnchor,
     rotated
-  }: YAxisMarkerProps) => (
+  }: YAxisMarkerProps) => {
+    return(
       <Text
         x={x}
         y={y}
@@ -55,7 +56,7 @@ class YAxis extends Component<YAxisComponentProps> {
         </TSpan>
       </Text>
     )
-
+  }
   // Only update axis if the data or width changes
   shouldComponentUpdate(nextProps: YAxisComponentProps) {
     const { data, width, height, axisHeight, axisWidth } = this.props
@@ -109,6 +110,7 @@ class YAxis extends Component<YAxisComponentProps> {
       paddingLeft,
       paddingRight,
       paddingTop,
+      symbolCurrency,
     } = this.props
 
     const lines: JSX.Element[] = []
@@ -153,7 +155,7 @@ class YAxis extends Component<YAxisComponentProps> {
               'middle',
             key: `${i}-text`,
             labelStyle: axisMarkerStyle,
-            label: yRange[0] + (i * tickInterval)
+            label:yRange[0]  + (i * tickInterval) > 9 ? parseInt(yRange[0]  + (i * tickInterval)) : parseFloat(yRange[0]  + (i * tickInterval)).toPrecision(3) 
           }))
         }
       }
