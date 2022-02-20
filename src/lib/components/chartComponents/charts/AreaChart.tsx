@@ -65,7 +65,7 @@ class AreaChart extends Component<AreaChartProps> {
       data.length > 1 ? scaleX(data[data.length - 1].x) : width - paddingRight
 
     return (
-      <Svg {...{ width, height }}>
+      <Svg {...{ width: width + 20, height }}>
         <Defs>{renderFillGradient({ id: 'gradient' })}</Defs>
         <YAxis
           data={data}
