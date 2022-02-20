@@ -109,8 +109,7 @@ class YAxis extends Component<YAxisComponentProps> {
       hideMarkers,
       paddingLeft,
       paddingRight,
-      paddingTop,
-      symbolCurrency,
+      paddingTop
     } = this.props
 
     const lines: JSX.Element[] = []
